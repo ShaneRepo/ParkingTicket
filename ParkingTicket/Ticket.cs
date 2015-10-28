@@ -13,7 +13,7 @@ namespace ParkingTicket
         private string _color;
         private string _plateNumber;
         private string _copName;
-        private string _copNumber;
+        private int _copNumber;
         private int _minParked;
         private int _purTime;
         private int _fine;
@@ -46,7 +46,7 @@ namespace ParkingTicket
             get { return _copName; }
             set { _copName = value; }
         }
-        public string CopNumber
+        public int CopNumber
         {
             get { return _copNumber; }
             set { _copNumber = value; }
