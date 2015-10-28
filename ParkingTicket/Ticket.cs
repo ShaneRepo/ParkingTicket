@@ -41,5 +41,30 @@ namespace ParkingTicket
             get { return _plateNumber; }
             set { _plateNumber = value; }
         }
+        public string CopName
+        {
+            get { return _copName; }
+            set { _copName = value; }
+        }
+        public string CopNumber
+        {
+            get { return _copNumber; }
+            set { _copNumber = value; }
+        }
+        public int MinParked
+        {
+            get { return _minParked; }
+            set { _minParked = value; }
+        }
+        public int PurTime
+        {
+            get { return _purTime; }
+            set { _purTime = value; }
+        }
+        public int Fine
+        {
+            get { return _fine; }
+            set { _fine = value; }
+        }
     }
 }
