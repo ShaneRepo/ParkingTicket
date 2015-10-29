@@ -41,6 +41,8 @@
             this.buttonPurTime = new System.Windows.Forms.Button();
             this.buttonElapse = new System.Windows.Forms.Button();
             this.buttonInspection = new System.Windows.Forms.Button();
+            this.labelTime = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -153,11 +155,33 @@
             this.buttonInspection.Text = "Inspection";
             this.buttonInspection.UseVisualStyleBackColor = true;
             // 
+            // labelTime
+            // 
+            this.labelTime.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTime.Location = new System.Drawing.Point(246, 126);
+            this.labelTime.Name = "labelTime";
+            this.labelTime.Size = new System.Drawing.Size(167, 42);
+            this.labelTime.TabIndex = 13;
+            this.labelTime.Text = "labelTime";
+            this.labelTime.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(235, 77);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(197, 23);
+            this.label7.TabIndex = 14;
+            this.label7.Text = "Time Purchased in hours";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(624, 556);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.labelTime);
             this.Controls.Add(this.buttonInspection);
             this.Controls.Add(this.buttonElapse);
             this.Controls.Add(this.buttonPurTime);
@@ -173,6 +197,7 @@
             this.Controls.Add(this.label1);
             this.Name = "MainForm";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -193,6 +218,8 @@
         private System.Windows.Forms.Button buttonPurTime;
         private System.Windows.Forms.Button buttonElapse;
         private System.Windows.Forms.Button buttonInspection;
+        private System.Windows.Forms.Label labelTime;
+        private System.Windows.Forms.Label label7;
     }
 }
 

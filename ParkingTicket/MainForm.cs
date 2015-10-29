@@ -16,5 +16,10 @@ namespace ParkingTicket
         {
             InitializeComponent();
         }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            labelTime.Text = "0";
+        }
     }
 }
