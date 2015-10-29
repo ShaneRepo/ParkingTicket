@@ -11,9 +11,10 @@ namespace ParkingTicket
         private string _name;
         private int _number;
 
-        public Cop()
+        public Cop() // init cop to these params
         {
-
+            _name = "Dean Winchester";
+            _number = 1986;
         }
         public string Name
         {
