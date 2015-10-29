@@ -15,5 +15,15 @@ namespace ParkingTicket
         {
 
         }
+        public string Name
+        {
+            get { return _name; }
+            set { _name = value; }
+        }
+        public int Number
+        {
+            get { return _number; }
+            set { _number = value; }
+        }
     }
 }
