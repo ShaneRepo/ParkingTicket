@@ -16,7 +16,10 @@ namespace ParkingTicket
         {
             InitializeComponent();
         }
-
+        // reserve memory for objects
+        Car someCar;
+        Cop someCop;
+        Ticket someTicket;
         private void MainForm_Load(object sender, EventArgs e)
         {
             labelTime.Text = "0";
