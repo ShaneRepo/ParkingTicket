@@ -60,5 +60,53 @@ namespace ParkingTicket
                 MessageBox.Show("You must park your car first!");
             }
         }
+
+        private void buttonInspection_Click(object sender, EventArgs e)
+        {
+            if (parked)
+            {
+                int tickTime = aTicket.Time;
+                int carTime = aCar.PurTime;
+                int fine = (aCar.PurTime - aTicket.Time);
+                double total = aTicket.Fine + aTicket.Fine2;
+                if (fine < 0)
+                {
+                    aTicket.Fine = 25.00;
+                    if (fine < -1)
+                    {
+                        switch (fine)
+                        {
+                            case -2:
+                                aTicket.Fine2 = 10.00;
+                                break;
+                            case -3:
+                                aTicket.Fine2 = 20.00;
+                                break;
+                            case -4:
+                                aTicket.Fine2 = 30.00;
+                                break;
+                            case -5:
+                                aTicket.Fine2 = 40.00;
+                                break;
+                            case -6:
+                                aTicket.Fine2 = 50.00;
+                                break;
+                            default:
+                                aTicket.Fine2 = 50.00;
+                                aTicket.Towed = true;
+                                break;
+                        }
+                    }
+                }
+                MessageBox.Show(fine.ToString());
+                MessageBox.Show(aTicket.Towed.ToString());
+                MessageBox.Show(total.ToString("C"));
+                
+            }
+            else
+            {
+                MessageBox.Show("You must park your car first!");
+            }
+        }
     }
 }

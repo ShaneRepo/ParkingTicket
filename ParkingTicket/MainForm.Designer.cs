@@ -161,6 +161,7 @@
             this.buttonInspection.TabIndex = 12;
             this.buttonInspection.Text = "Inspection";
             this.buttonInspection.UseVisualStyleBackColor = true;
+            this.buttonInspection.Click += new System.EventHandler(this.buttonInspection_Click);
             // 
             // labelTime
             // 

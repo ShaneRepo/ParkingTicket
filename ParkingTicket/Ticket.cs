@@ -17,8 +17,9 @@ namespace ParkingTicket
         private int _minParked;
         private int _purTime;
         private int _time;
-        private int _fine;
-        private int _fine2;
+        private double _fine;
+        private double _fine2;
+        private Boolean _isTowed = false;
         public Ticket()
         {
 
@@ -63,12 +64,12 @@ namespace ParkingTicket
             get { return _purTime; }
             set { _purTime = value; }
         }
-        public int Fine
+        public double Fine
         {
             get { return _fine; }
             set { _fine = value; }
         }
-        public int Fine2
+        public double Fine2
         {
             get { return _fine2; }
             set { _fine2 = value; }
@@ -77,6 +78,11 @@ namespace ParkingTicket
         {
             get { return _time; }
             set { _time = value; }
+        }
+        public bool Towed
+        {
+            get { return _isTowed; }
+            set { _isTowed = value; }
         }
     }
 }
