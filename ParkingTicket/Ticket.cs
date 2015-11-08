@@ -16,7 +16,9 @@ namespace ParkingTicket
         private int _copNumber;
         private int _minParked;
         private int _purTime;
+        private int _time;
         private int _fine;
+        private int _fine2;
         public Ticket()
         {
 
@@ -65,6 +67,16 @@ namespace ParkingTicket
         {
             get { return _fine; }
             set { _fine = value; }
+        }
+        public int Fine2
+        {
+            get { return _fine2; }
+            set { _fine2 = value; }
+        }
+        public int Time
+        {
+            get { return _time; }
+            set { _time = value; }
         }
     }
 }

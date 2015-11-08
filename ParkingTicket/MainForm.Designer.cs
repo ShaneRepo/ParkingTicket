@@ -151,6 +151,7 @@
             this.buttonElapse.TabIndex = 11;
             this.buttonElapse.Text = "Elapse Time";
             this.buttonElapse.UseVisualStyleBackColor = true;
+            this.buttonElapse.Click += new System.EventHandler(this.buttonElapse_Click);
             // 
             // buttonInspection
             // 

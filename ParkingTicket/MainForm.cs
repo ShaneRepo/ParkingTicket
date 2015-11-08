@@ -47,5 +47,18 @@ namespace ParkingTicket
                 MessageBox.Show("You must park your car first!");
             }
         }
+
+        private void buttonElapse_Click(object sender, EventArgs e)
+        {
+            if (parked)
+            {
+                aTicket.Time += 1;
+                MessageBox.Show("Time elapsed 1 hour!");
+            }
+            else
+            {
+                MessageBox.Show("You must park your car first!");
+            }
+        }
     }
 }
