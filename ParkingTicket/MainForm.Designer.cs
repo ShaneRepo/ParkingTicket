@@ -127,6 +127,7 @@
             this.buttonParkCar.TabIndex = 9;
             this.buttonParkCar.Text = "Park Car";
             this.buttonParkCar.UseVisualStyleBackColor = true;
+            this.buttonParkCar.Click += new System.EventHandler(this.buttonParkCar_Click);
             // 
             // buttonPurTime
             // 

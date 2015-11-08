@@ -14,9 +14,12 @@ namespace ParkingTicket
         private string _plateNumber;
         private int _minParked;
         private int _purTime;
-        public Car()
+        public Car()// default values if user does not pick.
         {
-
+            _make = "Dodge";
+            _model = "Ram 1500";
+            _color = "Blue";
+            _plateNumber = "ABC123";
         }
         public string Make
         {
