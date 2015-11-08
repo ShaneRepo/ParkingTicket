@@ -22,11 +22,7 @@ namespace ParkingTicket
         {
             InitializeComponent();
         }
-        // reserve memory for objects
-        Car someCar;
-        Cop someCop;
-        Ticket someTicket;
-        Boolean flag = false;
+        
         private void MainForm_Load(object sender, EventArgs e)
         {
             labelTime.Text = "0";
@@ -34,7 +30,7 @@ namespace ParkingTicket
 
         private void buttonParkCar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("");
+            MessageBox.Show("You parked " + aCar.Make + " " + aCar.Model);
         }
     }
 }
