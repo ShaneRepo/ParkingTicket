@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace ParkingTicket
 {
+    // TODO car and cop should inherit from ticket class for efficiency
     public partial class MainForm : Form
     {
         // initalize 3 objects
@@ -21,7 +22,11 @@ namespace ParkingTicket
         {
             InitializeComponent();
         }
-
+        // reserve memory for objects
+        Car someCar;
+        Cop someCop;
+        Ticket someTicket;
+        Boolean flag = false;
         private void MainForm_Load(object sender, EventArgs e)
         {
             labelTime.Text = "0";

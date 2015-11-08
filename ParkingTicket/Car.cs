@@ -14,12 +14,14 @@ namespace ParkingTicket
         private string _plateNumber;
         private int _minParked;
         private int _purTime;
-        public Car()// default values if user does not pick.
+        public Car() // init car to these params
         {
             _make = "Dodge";
             _model = "Ram 1500";
             _color = "Blue";
-            _plateNumber = "ABC123";
+            _plateNumber = "abc123";
+            _minParked = 0;
+            _purTime = 0;
         }
         public string Make
         {
