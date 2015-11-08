@@ -14,10 +14,9 @@ namespace ParkingTicket
     // TODO add ability to read info from textbox into aCar object
     public partial class MainForm : Form
     {
-        // initalize 3 objects
         Car aCar = new Car();
         Cop aCop = new Cop();
-        Ticket aTicket = new Ticket();
+        public Ticket aTicket = new Ticket();
         Boolean parked = false;
         public MainForm()
         {
@@ -68,7 +67,7 @@ namespace ParkingTicket
                 int tickTime = aTicket.Time;
                 int carTime = aCar.PurTime;
                 int fine = (aCar.PurTime - aTicket.Time);
-                double total = aTicket.Fine + aTicket.Fine2;
+                
                 if (fine < 0)
                 {
                     aTicket.Fine = 25.00;
@@ -97,10 +96,23 @@ namespace ParkingTicket
                                 break;
                         }
                     }
+                    
                 }
-                MessageBox.Show(fine.ToString());
-                MessageBox.Show(aTicket.Towed.ToString());
-                MessageBox.Show(total.ToString("C"));
+                double total = aTicket.Fine + aTicket.Fine2;
+                aTicket.Make = aCar.Make;
+                aTicket.Model = aCar.Model;
+                aTicket.Make = aCar.Make;
+                aTicket.PlateNumber = aCar.PlateNumber;
+                aTicket.Fine = total;
+                aTicket.CopName = aCop.Name;
+                aTicket.CopNumber = aCop.Number;
+                aTicket.Color = aCar.Color;              
+                TicketForm tickForm = new TicketForm(this);
+                tickForm.bTicket = aTicket;
+                tickForm.ShowDialog();
+                //MessageBox.Show(fine.ToString());
+                //MessageBox.Show(aTicket.Towed.ToString());
+                //MessageBox.Show(total.ToString("C"));
                 
             }
             else

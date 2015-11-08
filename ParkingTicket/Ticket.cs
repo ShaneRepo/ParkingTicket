@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ParkingTicket
 {
-    class Ticket
+    public class Ticket
     {
         private string _make;
         private string _model;
