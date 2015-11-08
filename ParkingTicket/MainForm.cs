@@ -30,6 +30,26 @@ namespace ParkingTicket
 
         private void buttonParkCar_Click(object sender, EventArgs e)
         {
+            string mk = textBox1.Text;
+            string mod = textBox2.Text;
+            string col = textBox3.Text;
+            string pn = textBox4.Text;
+            if (!string.IsNullOrWhiteSpace(textBox1.Text))
+            {
+                aCar.Make = mk;
+            }
+            if (!string.IsNullOrWhiteSpace(textBox2.Text))
+            {
+                aCar.Model = mod;
+            }
+            if (!string.IsNullOrWhiteSpace(textBox2.Text))
+            {
+                aCar.Color = col;
+            }
+            if (!string.IsNullOrWhiteSpace(textBox2.Text))
+            {
+                aCar.PlateNumber = pn;
+            }
             MessageBox.Show("You parked " + aCar.Make + " " + aCar.Model);
             parked = true;
         }
@@ -39,6 +59,7 @@ namespace ParkingTicket
             if (parked)
             {
                 aCar.PurTime += 1;
+                labelTime.Text += 1;
                 MessageBox.Show("You purchased an additional hour for a total of " + aCar.PurTime + " hours.");
             }
             else
@@ -99,6 +120,7 @@ namespace ParkingTicket
                     
                 }
                 double total = aTicket.Fine + aTicket.Fine2;
+                
                 aTicket.Make = aCar.Make;
                 aTicket.Model = aCar.Model;
                 aTicket.Make = aCar.Make;
@@ -110,10 +132,7 @@ namespace ParkingTicket
                 TicketForm tickForm = new TicketForm(this);
                 tickForm.bTicket = aTicket;
                 tickForm.ShowDialog();
-                //MessageBox.Show(fine.ToString());
-                //MessageBox.Show(aTicket.Towed.ToString());
-                //MessageBox.Show(total.ToString("C"));
-                
+ 
             }
             else
             {
