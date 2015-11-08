@@ -141,6 +141,7 @@
             this.buttonPurTime.TabIndex = 10;
             this.buttonPurTime.Text = "Purchase Time";
             this.buttonPurTime.UseVisualStyleBackColor = true;
+            this.buttonPurTime.Click += new System.EventHandler(this.buttonPurTime_Click);
             // 
             // buttonElapse
             // 
